@@ -1,6 +1,6 @@
 # **Traffic Sign Recognition** 
 
-## Writeup
+## Detailed explanation
 
 **Build a Traffic Sign Recognition Project**
 
@@ -11,12 +11,6 @@ The goals / steps of this project are the following:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
-
-
-## Rubric Points 
-
----
-### Writeup / README
 
 
 ### Data Set Summary & Exploration
