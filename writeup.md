@@ -69,8 +69,8 @@ The optmizer used is the Adam Optimizer ( *tf.train.AdamOptimizer()* ).
 To increase model robustness, a dropout layer with keep_rate of 0.75 was added to the final FC layer. It was also observed that after 10 epochs, the validation accuracy often started decreasing. This is probably due to overfitting on the training set. A learning rate of 0.001 was found to yield satisfactory results. Values bigger than this caused the model to become more unstable (varying the accuracy up and down after some point) and smaller values took longer to train without significant improvement. 
 
 The final model results were:
-* training set accuracy of 0.995
-* validation set accuracy of 0.942
+* training set accuracy of 0.997
+* validation set accuracy of 0.934
 * test set accuracy of 0.924
 
 ### Test a Model on New Images
@@ -89,10 +89,10 @@ Here are the results of the prediction:
 | Turn right ahead     			           | Turn right ahead 							|
 | No entry					               | No entry									|
 | Road work	      		                   | Road work					 				|
-| Children crossing		                 | **Right-of-way at the next intersection**    	|
+| Children crossing		                   | Children crossing    	|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares reasonably close to the test accuracy of 92.4%, given that the sample size is much smaller. The last image was incorrectly classified, but had also a smaller relative confidence of 87%, and with the second highest probability, the right class. 
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares reasonably close to the test accuracy of 92.4%, even though this sample size is much smaller (only 5 images). 
 
 The confidence of each classification is shown bellow. They can also be found in the last cell of the jupyter notebook. 
 
@@ -111,9 +111,9 @@ Second image (Turn right ahead):
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .81         			| Turn right ahead   									| 
-| .20     				| Ahead only 										|
-| .001					| Keep left											|
+| .93         			| Turn right ahead   									| 
+| .07     				| Turn left ahead 										|
+| .001					| Beware of ice/snow					|
 | .00	      			| -					 				|
 | .00				    | -      							|
 
@@ -132,7 +132,7 @@ Fourth image (Road work):
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.99         			| Road work   									| 
-| .001     				| Right-of-way at the next intersectio 										|
+| .0001     			| Speed limit (80km/h) 							|
 | .00					| -											|
 | .00	      			| -					 				|
 | .00				    | -      							|
@@ -141,10 +141,10 @@ Fifth image (Children crossing):
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .87         			| Right-of-way at the next intersection   									| 
-| .10     				| Children crossing 										|
-| .02					| Dangerous curve to the right											|
-| .001	      			| Pedestrians				 				|
+| .99         			| Children crossing   						| 
+| .0002     			| End of no passing 							|
+| .0002					| Slippery road								|
+| .00	      			| -				 				   |
 | .00				    | -      							|
 
 
