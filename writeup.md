@@ -1,8 +1,6 @@
 # **Traffic Sign Recognition** 
 
 ## Writeup
-![alt text](example/image.png)
-
 
 **Build a Traffic Sign Recognition Project**
 
@@ -97,7 +95,7 @@ Here are the results of the prediction:
 | Turn right ahead     			           | Turn right ahead 							|
 | No entry					               | No entry									|
 | Road work	      		                   | Road work					 				|
-| Children crossing		                 | Right-of-way at the next intersection    	|
+| Children crossing		                 | **Right-of-way at the next intersection**    	|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares reasonably close to the test accuracy of 92.4%, given that the sample size is much smaller. The last image was incorrectly classified, but had also a smaller relative confidence of 87%, and with the second highest probability, the right class. 
